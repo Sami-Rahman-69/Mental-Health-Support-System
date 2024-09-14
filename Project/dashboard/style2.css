@@ -1,0 +1,32 @@
+/* Sidebar Customization */
+#sidebar-wrapper {
+    width: 250px;
+    position: fixed;
+    height: 100%;
+    z-index: 1000;
+}
+
+#wrapper {
+    display: flex;
+}
+
+#page-content-wrapper {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+/* Custom Card Styling */
+.card {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card-header {
+    font-weight: bold;
+}
+
+/* Chart Customization */
+canvas {
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+}

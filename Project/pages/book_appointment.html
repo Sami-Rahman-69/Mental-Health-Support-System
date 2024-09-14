@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SerenitySphere - Book an Appointment</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <!-- Include header -->
+  <?php include('header.html'); ?>
+
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header bg-success text-white">
+            <h2>Book an Appointment</h2>
+          </div>
+          <div class="card-body">
+            <form action="submit_appointment.php" method="POST">
+              <div class="form-group">
+                <label for="doctor_name">Doctor Name:</label>
+                <input type="text" class="form-control" id="doctor_name" name="doctor_name" readonly value="Dr. John Smith">
+              </div>
+              <div class="form-group">
+                <label for="appointment_date">Appointment Date:</label>
+                <input type="date" class="form-control" id="appointment_date" name="appointment_date" required>
+              </div>
+              <div class="form-group">
+                <label for="appointment_time">Appointment Time:</label>
+                <input type="time" class="form-control" id="appointment_time" name="appointment_time" required>
+              </div>
+              <button type="submit" class="btn btn-success btn-block">Book Appointment</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Include footer -->
+  <?php include('footer.html'); ?>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

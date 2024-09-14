@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SerenitySphere - Admin Dashboard</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <!-- Include header -->
+  <?php include('header.html'); ?>
+
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <div class="card">
+          <div class="card-header bg-primary text-white">
+            <h2>Admin Dashboard</h2>
+          </div>
+          <div class="card-body">
+            <h3>Manage Doctors</h3>
+            <a href="add_doctor.html" class="btn btn-success mb-3">Add Doctor</a>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Speciality</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Dr. John Smith</td>
+                  <td>Psychiatrist</td>
+                  <td><a href="edit_doctor.html" class="btn btn-warning">Edit</a> <a href="#" class="btn btn-danger">Delete</a></td>
+                </tr>
+                <!-- Repeat similar blocks for more doctors -->
+              </tbody>
+            </table>
+
+            <h3>Manage Organizations</h3>
+            <a href="add_organization.html" class="btn btn-success mb-3">Add Organization</a>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Address</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Helping Hands</td>
+                  <td>123 Charity St, Anytown</td>
+                  <td><a href="edit_organization.html" class="btn btn-warning">Edit</a> <a href="#" class="btn btn-danger">Delete</a></td>
+                </tr>
+                <!-- Repeat similar blocks for more organizations -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Include footer -->
+  <?php include('footer.html'); ?>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+

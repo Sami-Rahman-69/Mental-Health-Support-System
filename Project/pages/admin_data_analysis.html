@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SerenitySphere - Admin Data Analysis</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- Include header -->
+  <?php include('header.html'); ?>
+
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <div class="card">
+          <div class="card-header bg-info text-white">
+            <h2>Data Analysis Dashboard</h2>
+          </div>
+          <div class="card-body">
+            <canvas id="genderChart" width="400" height="200"></canvas>
+            <canvas id="ageChart" width="400" height="200"></canvas>
+            <canvas id="diseaseChart" width="400" height="200"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Include footer -->
+  <?php include('footer.html'); ?>
+
+  <script>
+    const genderCtx = document.getElementById('genderChart').getContext('2d');
+    const genderChart = new Chart(genderCtx, {
+      type: 'pie',
+      data: {
+        labels: ['Male', 'Female'],
+        datasets: [{
+          label: 'Gender Distribution',
+          data: [50, 50], // Example data
+          backgroundColor: ['#36a2eb', '#ff6384'],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true
+      }
+    });
+
+    const ageCtx = document.getElementById('ageChart').getContext('2d');
+    const ageChart = new Chart(ageCtx, {
+      type: 'bar',
+      data: {
+        labels: ['0-18', '19-30', '31-45', '46-60', '61+'],
+        datasets: [{
+          label: 'Age Distribution',
+          data: [10, 20, 30, 25, 15], // Example data
+          backgroundColor: '#4bc0c0',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true
+      }
+    });
+
+    const diseaseCtx = document.getElementById('diseaseChart').getContext('2d');
+    const diseaseChart = new Chart(diseaseCtx, {
+      type: 'bar',
+      data: {
+        labels: ['Anxiety', 'Depression', 'Bipolar Disorder', 'PTSD', 'Schizophrenia'],
+        datasets: [{
+          label: 'Disease Distribution',
+          data: [20, 35, 10, 15, 5], // Example data
+          backgroundColor: '#ff9f40',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true
+      }
+    });
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+/* Home Page */
+.jumbotron {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Registration Page */
+.card-header {
+  background-color: #28a745;
+  color: #fff;
+}
+
+/* Login Page */
+.card-header {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+/* Navbar */
+.navbar {
+  margin-bottom: 20px;
+}

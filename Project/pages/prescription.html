@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SerenitySphere - Generate Prescription</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <!-- Include header -->
+  <?php include('header.html'); ?>
+
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-header bg-danger text-white">
+            <h2>Generate Prescription</h2>
+          </div>
+          <div class="card-body">
+            <form action="submit_prescription.php" method="POST">
+              <div class="form-group">
+                <label for="patient_name">Patient Name:</label>
+                <input type="text" class="form-control" id="patient_name" name="patient_name" readonly value="John Doe">
+              </div>
+              <div class="form-group">
+                <label for="symptoms">Symptoms:</label>
+                <textarea class="form-control" id="symptoms" name="symptoms" required></textarea>
+              </div>
+              <div class="form-group">
+                <label for="treatment_plan">Treatment Plan:</label>
+                <textarea class="form-control" id="treatment_plan" name="treatment_plan" required></textarea>
+              </div>
+              <div class="form-group">
+                <label for="medicine">Medicine (Name, Dosage, Time):</label>
+                <textarea class="form-control" id="medicine" name="medicine" required></textarea>
+              </div>
+              <div class="form-group">
+                <label for="next_visit_date">Next Visit Date:</label>
+                <input type="date" class="form-control" id="next_visit_date" name="next_visit_date" required>
+              </div>
+              <button type="submit" class="btn btn-danger btn-block">Generate Prescription</button>
+              <button type="button" class="btn btn-secondary btn-block" onclick="window.print()">Print</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Include footer -->
+  <?php include('footer.html'); ?>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
